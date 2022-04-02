@@ -39,7 +39,7 @@
               <textarea name="message" v-model="formData.message"></textarea>
             </div>
 
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>
@@ -79,6 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/function";
   .contact-wrapper{
     display: flex;
     align-items: center;
@@ -90,6 +91,12 @@ export default {
       max-width: 45ch;
       flex: 1;
       padding-right: 0.5rem;
+      @include for-phone-only {
+      
+        h1{
+          margin-top: 0.5rem;
+        }
+      }
     }
     .right-block{
       max-width: 400px;
@@ -98,8 +105,8 @@ export default {
       padding-top: 1rem;
       padding-top: 0;
       border-radius: 4px;
-      border: 1px solid rgba(255,255,255,0.7);
-      background-color: rgba(255,255,255,0.5);
+      // border: 1px solid rgba(255,255,255,0.7);
+      background-color: var(--color-accent-bg);;
       border: 1px solid rgba(0,0,0,0.1);
       form{
         padding: 1rem;
@@ -111,6 +118,7 @@ export default {
             margin-top: 1rem;
             text-transform: capitalize;
             font-size: var(--size-400);
+            color: var(--color-h-black);
           }
           input, textarea{
             resize: vertical;
@@ -118,7 +126,7 @@ export default {
             font-family: inherit;
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
-            background-color: #efefef;
+            background-color: var(--color-accent-bg-inner);
             border: 2px solid transparent;
             line-height: 1.15;
             margin: 0;
@@ -133,20 +141,23 @@ export default {
         }
         button{
           margin-top: 1rem;
-          padding: 0.45rem;
-          padding-right: 0.45rem;
-          padding-left: 0.45rem;
-          padding-left: 1.25rem;
+          padding-left: 1.5rem;
           padding-right: 1.5rem;
-          background-color: rgba(234,68,68,0.8);
+          padding-top: 0.4rem;
+          padding-bottom: 0.2rem;
+          background-color: var(--color-primary);
           color: #333;
-          border: 1px solid rgba(255,255,255,0.8);
-          text-transform: uppercase;
+          border: 1px solid var(--color-accent-bg-inner);
           border-radius: 4px;
           font-weight: 600;
+          cursor: pointer;
            font-size: var(--size-100);
         }
       }
+    }
+
+    @include for-phone-only{
+      flex-direction: column;
     }
   }
 </style>

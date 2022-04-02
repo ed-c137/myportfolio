@@ -52,10 +52,25 @@ export default {
         align-items: center;
         margin-right: 0.4rem;
         border-radius: 4px;
+        color: var(--color-h-black);
         svg{
             padding-right: 0.2rem;
         }
     }
+}
+
+.image{
+  height: 400px;
+  width: 100%;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.title{
+  color: var(--color-heading-black);
 }
 
 </style>

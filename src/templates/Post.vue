@@ -48,11 +48,14 @@ query Post ($path: String!) {
 </script>
 
 <style lang="scss">
-.post-content img{
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
+.post-content{
+    color: var(--color-p-black);
+    img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+} 
 
 </style>
 

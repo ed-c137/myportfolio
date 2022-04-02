@@ -136,7 +136,7 @@ export default {
         margin: 0 14px 40px;
         border: 1px solid rgba(153,153,153,0.54);
         border-radius: 2px;
-        background-color: white;
+        background-color: var(--color-accent-bg);
         // opacity: 0;
         display: flex;
         flex-direction: column;
@@ -168,16 +168,17 @@ export default {
             padding-top: 0px;
             position: relative;
             padding-top: 0.4rem;
+            color:var(--color-h-black);
             .builtby{
               font-size: 0.8rem;
               font-weight: 500;
-              color: orangered;
+              color: var(--color-primary);
               text-transform: capitalize;
             }
           }
             a{
               text-decoration: none;
-              color: black;
+              color: var(--color-h-black);
             }
             .project-desc{
               font-size: 0.9rem;

@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/styles/function";
 .filterbar{
     display: flex;
     justify-content: flex-end;
@@ -70,6 +71,7 @@ export default {
         .search-wrap{
             position: relative;
             display: inline-block;
+            color: var(--color-primary);
             input{
                 position: relative;
                 vertical-align: top;
@@ -83,7 +85,7 @@ export default {
                 color: var(--color-text);
                 border: 0;
                 transition: background .3s,box-shadow .3s;
-                background-color: rgb(231, 231, 231);
+                background-color: var(--color-accent-bg);
 
                 &:focus{
                     outline: 0;
@@ -91,19 +93,21 @@ export default {
                 }
             }
             svg{
-                margin-left: -1.66rem;
+                // margin-left: -1.66rem;
+                position: absolute;
+                right: 0.5rem;
                 width: 1rem;
                 pointer-events: none;
                 opacity: .6;
-                margin-top: .5rem;
+               top: 0.5rem;
             }
         }
     }
     .searchResults{
         position: absolute;
         top: 100%;
-        left: 0;
-        width: max-content;
+        right: 0;
+        // width: max-content;
         background: #fff;
         z-index: 9999;
         border-top: 1px solid #eee;
@@ -117,16 +121,41 @@ export default {
         background: whitesmoke;
         border: none;
         z-index: 999;
-        max-width: 600px;
-        min-width: 500px;
+        max-width: 320px;
+        min-width: 300px;
+
         box-shadow: 0 1px 0 0 rgba(0,0,0,.2),0 2px 3px 0 rgba(0,0,0,.1);
         font-size: 0.9rem;
         
         ul{
+            margin: 0;
             li{
+                margin: 0;
+                padding: 0;
                 list-style-type: none;
                 a{
                     text-decoration: none;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                    padding: 0.5rem 0.2rem 0.5rem 0.6rem;
+                }
+                &:last-child{
+                    margin: 0;
+                }
+
+                &:not(:last-child){
+                    border-bottom: 1px solid #eee;
+                }
+            
+            }
+        }
+        @include for-tablet-portrait-up{
+            max-width: 600px !important;
+            min-width: 500px !important;
+            ul{
+                li{
+                    // padding: 0.5rem 0.2rem;
                 }
             }
         }

@@ -27,7 +27,6 @@
         prevLabel="PREV"
         nextLabel="NEXT"
          />
-         
     </Layout>
 </template>
 
@@ -80,6 +79,7 @@ export default {
 </script>
 
 <style  lang="scss">
+
 nav[role="navigation"] {
   a{
       padding: 0.1rem 0.5rem 0.2rem 0.4rem;

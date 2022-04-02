@@ -5,8 +5,8 @@
           <a :href="twitterLnk">
             Follow me on Twitter
           </a>
-        </p>
-      
+      </p>
+    
     </div>
     
 </template>

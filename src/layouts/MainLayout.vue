@@ -1,5 +1,5 @@
 <template>
-    <div class="global-wrapper">
+    <div class="global-wrapper" :class="{ dark : !isLight }">
       
       <div class="content-wrapper">
       <header class="global-header">
@@ -40,7 +40,7 @@
             >
             <transition>
               <fa v-if="isLight" class="faico" icon="moon"/>
-               <fa v-else class="faico" icon="sun"/>
+               <fa v-else class="fasun" icon="sun"/>
             </transition>
             </button>
             <!-- <button class="toggle-button header-nav-link">
@@ -82,6 +82,17 @@ export default {
     methods:{
       toggleDLM(){
         this.isLight = !this.isLight;
+        if(this.isLight){
+          localStorage.setItem("theme", "light");
+        }else{
+          localStorage.setItem("theme", "dark");
+        }
+        let body = document.getElementsByTagName("body")[0];
+        if(body.classList.length === 0){
+          body.classList.add("dark");
+          } else {
+            body.classList.remove("dark");
+        }
       },
       scrolltoTop(){
        window.scroll({
@@ -97,6 +108,19 @@ export default {
           
     },
     created(){
+      let body = document.getElementsByTagName("body")[0];
+      if(localStorage.getItem('theme') === null){
+        localStorage.setItem('theme', 'light');
+      }else{
+
+        if(localStorage.getItem('theme') === 'light'){
+          this.isLight = true;
+          body.classList.remove("dark"); 
+        }else{
+           body.classList.add("dark");
+            this.isLight = false;
+        }
+      }
         // console.log(this.$router.currentRoute.path);
     }
 }
@@ -119,10 +143,21 @@ export default {
 .light-bar{
   height: 3px;
   width: 100%;
-  background: rgb(79, 176, 255);
+  // background: rgb(79, 176, 255);
+  background-image: linear-gradient(to right, #2a27a8 0%,#8c50bc 50%,#fc6e6c 100%);
+// height: 10px;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // position: fixed;
 }
-.faico{
-  color: black;
+.fasun{
+  color: var(--color-sun);
+}
+.toggle-button{
+  @include for-phone-only {
+    margin-bottom: 0.5rem;
+  }
 }
 .header-menu__wrap{
    .header-nav-link.active--exact{
@@ -145,8 +180,8 @@ export default {
 footer{
   // padding: auto 1rem;
   display: flex;
-  background: #141c3a;
-  color:white;
+  background: var(--color-accent-bg);
+  color:var(--color-text-light);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-top: 1rem;
@@ -200,6 +235,9 @@ footer{
   }
   &:hover{
     opacity: 1;
+  }
+  @include for-phone-only {
+    right: 20px;
   }
 }
 

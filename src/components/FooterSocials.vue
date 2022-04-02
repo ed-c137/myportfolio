@@ -31,7 +31,7 @@ export default {
 
   a{    
       text-decoration: none;
-      color:white;
+      color:var(--color-text-light);
       &:hover{
           color: var(--color-primary);
       }
