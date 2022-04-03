@@ -1,4 +1,5 @@
 <template>
+  <ClientOnly>
     <Layout  :title="$page.meta.siteName" >
         <!-- <SEO title=siteTitle /> -->
         <Search @search-results="filterResults"/>
@@ -28,6 +29,7 @@
         nextLabel="NEXT"
          />
     </Layout>
+    </ClientOnly>
 </template>
 
 <page-query>
@@ -53,12 +55,11 @@ meta : metadata{
 
 <script>
 import { Pager } from 'gridsome';
-import Search from '@/components/filterPosts.vue';
 
 export default {
     components: {
     Pager,
-    Search
+    Search : () => import('@/components/filterPosts.vue') // Lazy load it in
   },
     data() {
         return {

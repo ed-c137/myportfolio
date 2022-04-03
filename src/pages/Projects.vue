@@ -1,5 +1,6 @@
 <template>
     <div class="main">
+       <ClientOnly>
     <Layout>
       <h1>Projects</h1>
       <div class="projects-wrapper">
@@ -55,6 +56,7 @@
       </div>
       </div>
     </Layout>
+    </ClientOnly>
   </div>
 </template>
 

@@ -1,28 +1,30 @@
 <template>
-<Layout>
-  <article>
-      <div class="image">
-          <img :src="$page.project.featuredImage.src" alt="">
-      </div>
-      <div class="title">
-        <h1>
-             {{ $page.project.title }}
-        </h1>
-      </div>
-      <div class="post-content" v-html="$page.project.content"></div>
-      <hr>
-      <div class="langused">
-           <span
-            v-for="tag in $page.project.langs"
-            :key="tag"
-            class="post-lang"
-          >
-          <fa icon="hashtag"/>
-            {{ tag }}
-          </span>
-      </div>
-  </article>
-</Layout>
+ <ClientOnly>
+      <Layout>
+        <article>
+            <div class="image">
+                <img :src="$page.project.featuredImage.src" alt="">
+            </div>
+            <div class="title">
+              <h1>
+                  {{ $page.project.title }}
+              </h1>
+            </div>
+            <div class="post-content" v-html="$page.project.content"></div>
+            <hr>
+            <div class="langused">
+                <span
+                  v-for="tag in $page.project.langs"
+                  :key="tag"
+                  class="post-lang"
+                >
+                <fa icon="hashtag"/>
+                  {{ tag }}
+                </span>
+            </div>
+        </article>
+      </Layout>
+    </ClientOnly>
 </template>
 <page-query>
 query Project ($path: String!) {

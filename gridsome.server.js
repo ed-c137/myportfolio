@@ -10,8 +10,8 @@ const siteMeta = require('./siteMetadata.js');
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-    const category = addCollection('Category')
-    category.addReference('categories', 'Category')
+    // const category = addCollection('Category')
+    // category.addReference('categories', 'Category')
     
   })
 

@@ -20,10 +20,10 @@ module.exports = {
             typeName: 'Tag',
             create: true,
           },
-          categories: {
-            typeName: 'Category',
-            create: true,
-          },
+          // categories: {
+          //   typeName: 'Category',
+          //   create: true,
+          // },
         },
       }
     },
@@ -38,7 +38,7 @@ module.exports = {
   templates: {
     Post: '/blog/:title',
     Tag: '/tag/:id',
-    Category: '/category/:id',
+    // Category: '/category/:id',
     Project: '/project/:title',
   },
   transformers: {

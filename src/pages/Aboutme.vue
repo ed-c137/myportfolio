@@ -1,5 +1,7 @@
 <template>
+ <ClientOnly>
   <Layout>
+    
      <div class="about-hero">
     <div class="about-hero-inner">
       <div class="about-hero-text">
@@ -21,6 +23,7 @@
    
   </section>
   </Layout>
+  </ClientOnly>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+ <ClientOnly>
     <Layout>
         <h1>{{ $page.post.title }}</h1>
 
@@ -16,6 +17,7 @@
           </g-link>
         <!-- <Bio /> -->
     </Layout>
+    </ClientOnly>
 </template>
 
 <page-query>
@@ -25,10 +27,6 @@ query Post ($path: String!) {
     title
     content
     date (format: "MMMM D, Y")
-    categories {
-      id
-      path
-    }
     tags {
       title
       path

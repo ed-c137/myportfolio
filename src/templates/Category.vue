@@ -54,12 +54,8 @@ query Category ($id: ID!, $page: Int) {
       edges {
         node {
           ...on Post {
-            title
-            timeToRead
             date (format: "MMMM D, YYYY")
             path
-            summary
-            thumbnail
             categories {
               id
               path

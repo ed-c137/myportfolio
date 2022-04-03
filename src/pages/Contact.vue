@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-   
+    <ClientOnly>
     <Layout>
        
       <div class="contact-wrapper">
@@ -45,6 +45,7 @@
       </div>
          
     </Layout>
+    </ClientOnly>
 </div>
 </template>
 
