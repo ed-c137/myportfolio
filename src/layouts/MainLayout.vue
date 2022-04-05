@@ -113,7 +113,6 @@ export default {
 .light-bar{
   height: 3px;
   width: 100%;
-  // background: rgb(79, 176, 255);
   background-image: linear-gradient(to right, #2a27a8 0%,#8c50bc 50%,#fc6e6c 100%);
 // height: 10px;
   // top: 0;

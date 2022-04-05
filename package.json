@@ -1,6 +1,6 @@
 {
   "name": "myportfolio",
-  "homepage": "https://ed-c137.github.io/myportfolio",
+  "homepage": "http://edrick.xyz",
   "private": true,
   "scripts": {
     "build": "gridsome build",
