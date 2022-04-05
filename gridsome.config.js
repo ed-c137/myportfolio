@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Edrick.xyz',
-  siteUrl: `https://github/portfoliogatsby/`,
+  siteUrl: `https://ed-c137.github.io/myportfolio`,
   siteDescription: `A personal portfolio site with blog built using Gatsby.`,
   
   plugins: [
