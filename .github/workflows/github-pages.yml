@@ -3,7 +3,7 @@
 name: Build and Deploy an app to github pages
 on:
   push:
-    branches: [ main ] #run only when changes push to main branch
+    branches: [ master ] #run only when changes push to main branch
 jobs:
   build-and-deploy:
     name: Build and Deploy
