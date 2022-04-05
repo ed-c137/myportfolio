@@ -1,5 +1,5 @@
 <template>
- <ClientOnly>
+ 
     <Layout>
         <h1>{{ $page.post.title }}</h1>
 
@@ -16,8 +16,7 @@
             {{ tag.title }}
           </g-link>
         <!-- <Bio /> -->
-    </Layout>
-    </ClientOnly>
+    </Layout> 
 </template>
 
 <page-query>

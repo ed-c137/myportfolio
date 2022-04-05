@@ -1,5 +1,5 @@
 <template>
- <ClientOnly>
+ 
   <Layout>
     
      <div class="about-hero">
@@ -23,7 +23,7 @@
    
   </section>
   </Layout>
-  </ClientOnly>
+ 
 </template>
 
 <script>

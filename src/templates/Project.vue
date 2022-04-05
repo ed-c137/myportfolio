@@ -1,5 +1,5 @@
 <template>
- <ClientOnly>
+ 
       <Layout>
         <article>
             <div class="image">
@@ -24,7 +24,7 @@
             </div>
         </article>
       </Layout>
-    </ClientOnly>
+    
 </template>
 <page-query>
 query Project ($path: String!) {

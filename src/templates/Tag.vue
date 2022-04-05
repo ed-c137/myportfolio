@@ -1,5 +1,5 @@
 <template>
- <ClientOnly>
+ 
       <Layout>
         <div>RECENT ARTICLES BY TAG</div>
         <h1>This is a list of blog articles with the tag: {{ $page.tag.title }}</h1>
@@ -32,7 +32,7 @@
             /> -->
 
       </Layout>
-    </ClientOnly>
+    
 </template>
 
 <page-query>

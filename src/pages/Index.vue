@@ -1,5 +1,5 @@
 <template>
-  <ClientOnly>
+ 
     <Layout  :title="$page.meta.siteName" >
         <!-- <SEO title=siteTitle /> -->
         <Search @search-results="filterResults"/>
@@ -29,7 +29,7 @@
         nextLabel="NEXT"
          />
     </Layout>
-    </ClientOnly>
+    
 </template>
 
 <page-query>

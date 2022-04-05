@@ -34,15 +34,9 @@
             </g-link>
           </div>
           <div class="nav-menu-right">
-            <button
-              class="toggle-button header-nav-link"
-              @click="toggleDLM"
-            >
-            <transition>
-              <fa v-if="isLight" class="faico" icon="moon"/>
-               <fa v-else class="fasun" icon="sun"/>
-            </transition>
-            </button>
+            <ClientOnly>
+              <DayNight :isLight="isLight" @day-night-mode="toggleDNmode"/>
+            </ClientOnly>
             <!-- <button class="toggle-button header-nav-link">
               <img :src="RssSvg" alt="toggle theme" class="rss-icon" />
             </button> -->
@@ -67,7 +61,6 @@
 
 <script>
 import RssSvg from "@/assets/rss-symbol.svg";
-import FooterSocial from "@/components/FooterSocials.vue";
 
 export default {
     data(){
@@ -77,22 +70,14 @@ export default {
         }
     },
     components:{
-      FooterSocial        
+      FooterSocial: () => import("@/components/FooterSocials.vue"),
+      DayNight : () => import("@/components/DayNight.vue"),        
     },
     methods:{
-      toggleDLM(){
-        this.isLight = !this.isLight;
-        if(this.isLight){
-          localStorage.setItem("theme", "light");
-        }else{
-          localStorage.setItem("theme", "dark");
-        }
-        let body = document.getElementsByTagName("body")[0];
-        if(body.classList.length === 0){
-          body.classList.add("dark");
-          } else {
-            body.classList.remove("dark");
-        }
+      toggleDNmode(mode){
+        console.log(mode);
+        this.isLight = mode === 'light' ? true : false;
+        
       },
       scrolltoTop(){
        window.scroll({
@@ -107,22 +92,7 @@ export default {
     }
           
     },
-    created(){
-      let body = document.getElementsByTagName("body")[0];
-      if(localStorage.getItem('theme') === null){
-        localStorage.setItem('theme', 'light');
-      }else{
-
-        if(localStorage.getItem('theme') === 'light'){
-          this.isLight = true;
-          body.classList.remove("dark"); 
-        }else{
-           body.classList.add("dark");
-            this.isLight = false;
-        }
-      }
-        // console.log(this.$router.currentRoute.path);
-    }
+    
 }
 </script>
 
@@ -151,14 +121,7 @@ export default {
   // left: 0;
   // position: fixed;
 }
-.fasun{
-  color: var(--color-sun);
-}
-.toggle-button{
-  @include for-phone-only {
-    margin-bottom: 0.5rem;
-  }
-}
+
 .header-menu__wrap{
    .header-nav-link.active--exact{
         color: #fff;
