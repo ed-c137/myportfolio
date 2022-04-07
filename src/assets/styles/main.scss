@@ -65,7 +65,8 @@ body{
     width: 60px;
     border-radius: 100%;
     display: inline-block;
-    background: rgb(255, 79, 0);
+    // background: rgb(255, 79, 0);
+    background-image: linear-gradient(to right, #35bba8 0%, #9a50bc 50%, #f75250 100%);
       padding: 2px;
 
     img {

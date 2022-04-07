@@ -16,42 +16,46 @@ export default {
     props:['isLight'],
     data(){
         return{
-            isLightmode: true,
+            isLightmode: null,
         }
     },
     methods:{
         toggleDLM(){
-        this.isLight = !this.isLight;
-        if(this.isLight){
-          localStorage.setItem("theme", "light");
-        }else{
-          localStorage.setItem("theme", "dark");
-        }
+        this.isLightmode = !this.isLightmode;
+        
         let body = document.getElementsByTagName("body")[0];
-        if(body.classList.length === 0){
-          body.classList.add("dark");
+        if(!this.isLightmode){
+            body.classList.add("dark");
+            this.$emit('day-night-mode', 'dark');
+            localStorage.setItem('theme', 'dark');
           } else {
             body.classList.remove("dark");
+             this.$emit('day-night-mode', 'light');
+             localStorage.setItem('theme', 'light');
         }
       },
     },
     created(){
-      let body = document.getElementsByTagName("body")[0];
+     let body = document.getElementsByTagName("body")[0];
       if(localStorage.getItem('theme') === null){
         localStorage.setItem('theme', 'light');
+        this.isLightmode = true;
+        this.$emit('day-night-mode', 'light');
       }else{
-
         if(localStorage.getItem('theme') === 'light'){
           this.isLightmode = true;
-          body.classList.remove("dark");
+          // body.classList.remove("dark");
+          console.log('emmited light');
           this.$emit('day-night-mode', 'light');
         }else{
+          console.log('emmited dark');
            body.classList.add("dark");
             this.isLightmode = false;
             this.$emit('day-night-mode', 'dark');
         }
       }
         // console.log(this.$router.currentRoute.path);
+    
     }
     
 }

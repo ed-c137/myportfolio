@@ -18,7 +18,7 @@
   <section class="about">
     <h4>A bit about me...</h4>
     <p>
-      As a kid i was always curious of how things work the answers i recived never realy satified me so always broke open my toys without the knowlege of putting it back together😅. This curiosity led me to learning electronics but my heart finally realised that it was in writing code.
+      As a kid i was always curious of how things work, the answers i received never really satisfied me so I always broke open my toys without the knowledge of putting it back together 😅. This curiosity led me to learning electronics but my heart finally realised that it was in writing code.
     </p>
    
   </section>
