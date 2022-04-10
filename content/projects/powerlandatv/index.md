@@ -4,7 +4,7 @@ description: A wordpress desined theme
 template: projects-template
 type: "project"
 link: powerlandatv.com
-featuredImage: ./anoushka-p-7g1TPD_4MT4-unsplash.jpg
+featuredImage: ./powerland.jpg
 langs: ["javascript", "typescript"]
 ---
 

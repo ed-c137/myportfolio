@@ -3,9 +3,9 @@ title: 11ty Portofolio
 description: My Portfolio website built with 11ty
 template: projects-template
 type: "project"
-link: netlify.com
-gitlink: www.github.com
-featuredImage: ./mihai-moisa-WgdRfauPYO4-unsplash.jpg
+link: https://ed-c137.github.io/portfolio/
+gitlink: https://github.com/ed-c137/portfolio
+featuredImage: ./portfolio.jpg
 langs: ["html", "javascript", "css"]
 ---
 

@@ -33,7 +33,7 @@
                   </p>
                   <div class="builtby">
                     <span v-for="(lang, index ) in project.node.langs" :key="lang">
-                      {{ lang}}{{ index === project.node.langs.length - 1 ? '': ", " }}
+                      {{ lang }}{{ index === project.node.langs.length - 1 ? '': ", " }}
                     </span>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default {
       }
       .project-item{
         height: 330px;
-        width: 302px;
+        width: 295px;
         margin: 0 14px 40px;
         border: 1px solid rgba(153,153,153,0.54);
         border-radius: 2px;

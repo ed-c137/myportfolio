@@ -89,5 +89,18 @@ export default {
   @include for-phone-only {
     right: 20px;
   }
+  @include for-tablet-portrait-only {
+    right: 2vw;
+    bottom: 80px;
+  }
+  @include for-tablet-landscape-only {
+    right: 5%;
+    bottom: 70px;
+  }
+
+  @include for-desktop-only {
+    right: 8%;
+    bottom: 70px;
+  }
 }
 </style>

@@ -5,7 +5,7 @@ template: projects-template
 type: "project"
 link: netlify.com
 gitlink: www.github.com
-featuredImage: ./mihai-moisa-WgdRfauPYO4-unsplash.jpg
+featuredImage: ./portfolio-current.jpg
 langs: ["Vuejs", "Gridsome", "graphql"]
 ---
 

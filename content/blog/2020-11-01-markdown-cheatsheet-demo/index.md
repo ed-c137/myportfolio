@@ -3,6 +3,7 @@ title: Markdown Cheatsheet Demo
 date: "2020-11-01"
 template: post
 type: "post"
+tags: ['markdown','cheatsheet']
 ---
 
 This is my first post on my new fake blog! How exciting!

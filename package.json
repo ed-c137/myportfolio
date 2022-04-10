@@ -1,12 +1,12 @@
 {
   "name": "myportfolio",
-  "homepage": "http://edrick.xyz",
+  "homepage": "https://edrick.xyz",
   "private": true,
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && cp CNAME dist && gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -17,10 +17,12 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-gtag": "^0.1.10",
     "vue-cookie": "^1.1.4"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
+    "gh-pages-deploy": "^0.5.1",
     "sass": "^1.49.9",
     "sass-loader": "^10.1.1",
     "webpack": "^4.0.0"

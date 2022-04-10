@@ -33,7 +33,15 @@ module.exports = {
         typeName: 'Project',
         path: './content/projects/**/*.md',
       }
-    }
+    },
+    {
+      use: 'gridsome-plugin-gtag',
+      options: {
+        config: {
+          id: process.env.GOOGLE_ANALYTICS_ID,
+        },
+      },
+    },
   ],
   templates: {
     Post: '/blog/:title',
