@@ -16,8 +16,12 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
+    "@vuelidate/core": "^2.0.0-alpha.40",
+    "@vuelidate/validators": "^2.0.0-alpha.28",
+    "axios": "^0.26.1",
     "gridsome": "^0.7.0",
     "gridsome-plugin-gtag": "^0.1.10",
+    "sheetdb-js": "^1.0.3",
     "vue-cookie": "^1.1.4"
   },
   "devDependencies": {
