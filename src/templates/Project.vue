@@ -15,7 +15,7 @@
               </div>
             </div>
             <div class="post-content" v-html="$page.project.content"></div>
-            <div class="project-images">
+            <div class="project-images" v-if="$page.project.image2">
             <img :src="$page.project.image2.src" v-if="$page.project.image2" >
             </div>
             <hr>
