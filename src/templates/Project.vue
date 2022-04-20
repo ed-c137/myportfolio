@@ -3,14 +3,21 @@
       <Layout>
         <article>
             <div class="image">
-                <img :src="$page.project.featuredImage.src" alt="">
+                <img :src="$page.project.featuredImage.src" alt="featured image">
             </div>
             <div class="title">
               <h1>
                   {{ $page.project.title }}
               </h1>
+              <div class="buttons-header">
+                <a v-if="$page.project.link" class="title__btns" :href="$page.project.link" target="_blank">Live</a>
+                <a v-if="$page.project.gitlink" class="title__btns" :href="$page.project.gitlink" target="_blank">Github</a>
+              </div>
             </div>
             <div class="post-content" v-html="$page.project.content"></div>
+            <div class="project-images">
+            <img :src="$page.project.image2.src" v-if="$page.project.image2" >
+            </div>
             <hr>
             <div class="langused">
                 <span
@@ -31,10 +38,13 @@ query Project ($path: String!) {
    project: project (path: $path) {
     id
     title
+    link
+    gitlink
     content
     description
     langs
-    featuredImage(width: 600, height: 600, quality: 75)
+    featuredImage(width: 800, height: 600, quality: 75)
+    image2(width: 800, height: 600, quality: 75)
   }
 }
 </page-query>  
@@ -61,6 +71,22 @@ export default {
     }
 }
 
+.buttons-header{
+  margin-bottom: 1rem;
+  .title__btns{
+    padding: .1rem 1.4rem;
+    display: inline-block;
+    background-color: #9e9e9e;
+    color: white;
+    text-decoration: none;
+    &:hover, &:focus{
+      background-color: #757575;
+    }
+    &:first-child{
+      margin-right: 0.4rem;
+    }
+  }
+}
 .image{
   height: 400px;
   width: 100%;
@@ -75,4 +101,13 @@ export default {
   color: var(--color-heading-black);
 }
 
+.project-images{
+  width:100%;
+  height: 500px;
+  img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

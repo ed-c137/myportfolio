@@ -2,8 +2,9 @@
 title: Powerlandatv
 description: A wordpress desined theme
 template: projects-template
+order: 1
 type: "project"
-link: powerlandatv.com
+link: http://powerlandatv.com
 featuredImage: ./powerland.jpg
 langs: ["javascript", "typescript"]
 ---

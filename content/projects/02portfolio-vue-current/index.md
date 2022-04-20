@@ -2,9 +2,10 @@
 title: Gridsome Portofolio
 description: My Portfolio website built with Gridsome
 template: projects-template
+order: 2
 type: "project"
 link: netlify.com
-gitlink: www.github.com
+gitlink: edrick.xyz
 featuredImage: ./portfolio-current.jpg
 langs: ["Vuejs", "Gridsome", "graphql"]
 ---

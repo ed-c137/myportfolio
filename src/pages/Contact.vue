@@ -6,7 +6,7 @@
       <div class="contact-wrapper">
         <div class="left-block">
           <h1>Get in Touch</h1>
-            <p>If you've got an inquiry for a job or project,drop me a line at <a href="mailto:hello@hello.com">hello@hello.com</a> or fill the form right here.</p>
+            <p>If you've got an inquiry for a job or project,drop me a line at <a href="mailto:edrick613@gmail.com">edrick613@gmail.com</a> or fill the form right here.</p>
         </div>
         <div class="right-block">
           <form
@@ -23,14 +23,14 @@
             <div class="sender-info">
               <div class="form-group" >
                 <label for="name" class="label" >Your name</label>
-                <input type="text" name="name" v-model="form.name" />
+                <input type="text" name="name" v-model="form.name" required/>
                  <!-- <div class="input-errors" v-for="(error, index) of v$.form.name.$errors" :key="index">
                   <div class="error-msg">{{ error.$message }}</div>
                 </div> -->
               </div>
               <div class="form-group" >
                 <label for="email">Your email</label>
-                <input type="email" name="email" v-model="form.email" />
+                <input type="email" name="email" v-model="form.email" required />
                  <!-- <div class="input-errors" v-for="(error, index) of v$.form.email.$errors" :key="index">
                   <div class="error-msg">{{ error.$message }}</div>
                 </div> -->
@@ -39,7 +39,7 @@
 
             <div class="form-group message-wrapper" >
               <label for="message">Message</label>
-              <textarea name="message" v-model="form.message"></textarea>
+              <textarea name="message" v-model="form.message" required ></textarea>
               <!-- <div class="input-errors" v-for="(error, index) of v$.form.message.$errors" :key="index">
                 <div class="error-msg">{{ error.$message }}</div>
               </div> -->
@@ -50,7 +50,7 @@
             <div class="placehoder-wrap">
               <!-- <img src="https://via.placeholder.com/100x40/000000/FFFFFF/?text=09369"  alt=""> -->
               <img :src="cstring" height="40" width="100" alt="">
-              <input type="text" placeholder=" Type Caphca" v-model="captured">
+              <input type="text" placeholder=" Type Caphca" v-model="captured" required >
             </div>
             <div class="message" :class="{ error: isError, success: isSuccess }">{{ message }}</div>
             <button type="submit">Send</button>

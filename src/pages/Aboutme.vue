@@ -45,6 +45,7 @@
           <li>Laravel</li>
           <li>React</li>
           <li>Gatsby</li>
+          <li>Ionic</li>
         </ul>
       </div>
     </div>

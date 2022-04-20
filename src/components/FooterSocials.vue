@@ -1,12 +1,12 @@
 <template>
   <div class="social-links">
-      <a href="">
+      <a href="mailto:edrick613@gmail.com">
         <fa icon="envelope" />
       </a>
-        <a href="">
+        <a href="https://github.com/ed-c137" target="_blank">
              <fa :icon="['fab', 'github']" />
         </a>
-        <a href="">
+        <a href="https://linkedin.com/in/edrickoliveira" target="_blank">
              <fa :icon="['fab', 'linkedin']" />
         </a>
   </div>
