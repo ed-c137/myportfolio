@@ -99,7 +99,7 @@ export default {
                 width: 1rem;
                 pointer-events: none;
                 opacity: .6;
-               top: 0.5rem;
+               top: 0.37rem;
             }
         }
     }

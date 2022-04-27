@@ -99,6 +99,10 @@ export default {
   
 
 }
+
+.profile-brand__wrap{
+  color: var(--color-primary);
+}
 .light-bar{
   height: 3px;
   width: 100%;
